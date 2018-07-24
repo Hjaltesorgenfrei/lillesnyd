@@ -128,6 +128,8 @@
   <ItemGroup>
     <ClCompile Include="jsonutil.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="patternscan.cpp" />
+    <ClCompile Include="processtools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="pretty.json" />
@@ -135,6 +137,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="jsonutil.h" />
+    <ClInclude Include="patternscan.h" />
+    <ClInclude Include="processtools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

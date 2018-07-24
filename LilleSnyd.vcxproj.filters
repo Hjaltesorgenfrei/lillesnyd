@@ -21,6 +21,12 @@
     <ClCompile Include="jsonutil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="patternscan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="processtools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="test.json">
@@ -32,6 +38,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="jsonutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="patternscan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="processtools.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
