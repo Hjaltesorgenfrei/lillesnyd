@@ -107,3 +107,26 @@ std::vector<std::pair<char, bool>> convertToHexVector(const char* str) {
 	}
 	return buffer;
 }
+
+char * VectorToMask(std::vector<std::pair<char, bool>> pattern) {
+	char * buffer = new char[128];
+	std::size_t i = 0;
+	for (; i != pattern.size(); ++i) {
+		if (std::get<bool>(pattern[i]))
+			buffer[i] = 'x';
+		else
+			buffer[i] = '?';
+	}
+	buffer[i] = '\0';
+	return buffer;
+}
+
+char * VectorToPattern(std::vector<std::pair<char, bool>> pattern) {
+	char * buffer = new char[128];
+	std::size_t i = 0;
+	for (; i != pattern.size(); ++i) {
+		buffer[i] = std::get<char>(pattern[i]);
+	}
+	buffer[i] = '\0';
+	return buffer;
+}

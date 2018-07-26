@@ -4,8 +4,8 @@
 #include <vector>
 #include <utility>
 
-void * PatternScan(char* base, size_t size, std::vector<std::pair<char, bool>> pattern);
+char * PatternScan(const char* base, size_t size, const char* pattern, const char* mask);
 
-void * PatternScanEx(HANDLE hProcess, uintptr_t begin, uintptr_t end, char* pattern, char* mask);
+void * PatternScanEx(HANDLE hProcess, uintptr_t begin, uintptr_t end, const char* pattern, const char* mask);
 
-void * PatternScanExModule(HANDLE hProcess, wchar_t * exeName, wchar_t* module, char* pattern, char* mask);
+void * PatternScanExModule(HANDLE hProcess, const wchar_t * exeName, const wchar_t* module, const char* pattern, const char* mask);

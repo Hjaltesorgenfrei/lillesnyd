@@ -44,8 +44,8 @@ int main()
 			MODULEENTRY32 modEntry = GetModule(processID, L"client.dll");
 			std::cout << "THIS IS THE LOCALPLAYER" << std::endl;
 			//PatternScan
-			char * patternChar = VectorToPattern(pattern);
-			char * mask = VectorToMask(pattern);
+			char * patternChar = VectorToPattern(realnibba);
+			char * mask = VectorToMask(realnibba);
 			void * healthDecAddress = PatternScanExModule(hProcess, L"csgo.exe", L"client.dll", patternChar, mask);
 			std::cout << std::hex << healthDecAddress << std::endl;
 			LPVOID pBuffer;
