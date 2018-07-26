@@ -125,7 +125,10 @@ char * VectorToPattern(std::vector<std::pair<char, bool>> pattern) {
 	char * buffer = new char[128];
 	std::size_t i = 0;
 	for (; i != pattern.size(); ++i) {
-		buffer[i] = std::get<char>(pattern[i]);
+		if (std::get<bool>(pattern[i]))
+			buffer[i] = std::get<char>(pattern[i]);
+		else
+			buffer[i] = '\x00';
 	}
 	buffer[i] = '\0';
 	return buffer;

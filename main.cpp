@@ -23,19 +23,9 @@ int main()
 		json localplayer = jsonArrayValueFinder(j, "signatures", "name", "dwLocalPlayer");
 		std::cout << localplayer["pattern"] << std::endl;
 		std::vector<std::string> vec{ StringToVector(localplayer["pattern"], ' ') };
-		std::string stdq = localplayer["pattern"];
+		std::string patternString = localplayer["pattern"];
 		//print the vector
-		for (std::string const& item : vec) {
-			std::cout << "[" << item << "]";
-		}
-		std::cout << std::endl;
-		std::vector<std::pair<char, bool>> realnibba = convertToHexVector(stdq.c_str());
-		for (std::pair<char, bool> ch : realnibba)
-		{
-			if (std::get<bool>(ch))
-				std::cout << std::hex << (int)(unsigned char)std::get<char>(ch) << " ";
-			else std::cout << "? ";
-		}
+		std::vector<std::pair<char, bool>> realnibba = convertToHexVector(patternString.c_str());
 		//Get Process ID by enumerating the processes using tlhelp32snapshot
 		DWORD processID = GetProcID(L"csgo.exe");
 		//Get handle by OpenProcess
