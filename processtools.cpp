@@ -2,6 +2,9 @@
 
 #include <algorithm>
 
+
+
+
 //Get Process ID From an executable name using toolhelp32Snapshot
 DWORD GetProcID(const wchar_t * exeName)
 {
@@ -133,3 +136,5 @@ char * VectorToPattern(std::vector<std::pair<char, bool>> pattern) {
 	buffer[i] = '\0';
 	return buffer;
 }
+
+

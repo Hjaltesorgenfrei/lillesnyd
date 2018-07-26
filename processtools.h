@@ -21,3 +21,4 @@ std::vector<std::pair<char, bool>> convertToHexVector(const char* str);
 char * VectorToMask(std::vector<std::pair<char, bool>> pattern);
 
 char * VectorToPattern(std::vector<std::pair<char, bool>> pattern);
+
