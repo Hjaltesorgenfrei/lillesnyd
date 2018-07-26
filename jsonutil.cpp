@@ -73,9 +73,9 @@ int GetOffsetFromJson(json& j, std::string name) {
 			}
 #endif
 			if (PatternElement["relative"])
-				return (int)pBuffer - (int)modEntry.modBaseAddr;
+				return (int)pBuffer - (int)modEntry.modBaseAddr + PatternElement["extra"];
 			else
-				return (int)pBuffer;
+				return (int)pBuffer + PatternElement["extra"];
 		}
 	}
 	catch (std::runtime_error& runErr) {
