@@ -29,10 +29,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="test.json">
+    <None Include="pretty.json">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="pretty.json">
+    <None Include="config.json">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

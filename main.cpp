@@ -16,7 +16,7 @@ int main()
 {
 
 
-	std::ifstream ifs("test.json");
+	std::ifstream ifs("config.json");
 	json j = json::parse(ifs);
 
 	try {

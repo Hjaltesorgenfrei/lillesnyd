@@ -133,7 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="pretty.json" />
-    <None Include="test.json" />
+    <None Include="config.json" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="jsonutil.h" />
